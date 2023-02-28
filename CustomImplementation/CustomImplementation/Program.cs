@@ -9,5 +9,5 @@ list.AddLast(40);
 list.AddLast(50);
 list.AddLast(1000);
 list.AddFirst(2000);
-list.RemoveFirst();
-//list.RemoveLast();
+Console.WriteLine(list.RemoveFirst());
+Console.WriteLine(list.RemoveLast());

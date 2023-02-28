@@ -68,10 +68,12 @@
             if (this.First.Next == null)
             {
                 this.First = null;
+                this.Last = null;
             }
             else
             {
                 this.First = this.First.Next;
+                this.First.Previous = null;
             }
 
             return valueToReturn;
@@ -79,7 +81,25 @@
 
         public ItemType RemoveLast()
         {
-            throw new NotImplementedException();
+            if (this.First == null)
+            {
+                throw new InvalidOperationException("CustomLinkedList contains no elements");
+            }
+
+            var valueToReturn = this.Last!.Value;
+
+            if (this.Last.Previous == null)
+            {
+                this.First = null;
+                this.Last = null;
+            }
+            else
+            {
+                this.Last = this.Last.Previous;
+                this.Last.Next = null;
+            }
+
+            return valueToReturn;
         }
 
         public ItemType[] ToArray()
