@@ -1,33 +1,33 @@
 ﻿namespace CustomImplementation
 {
-    public class CustomStack<ItemType> 
+    public class CustomStack<StackItem> 
     {
         /// <summary>
-        /// field of type CustomLinkedList that conatains the items for
-        /// CustomStack
+        /// field of type <see cref="CustomLinkedList{StackItem}"/> that conatains the items for
+        /// <see cref="CustomStack{StackItem}"/>
         /// </summary>
-        private CustomLinkedList<ItemType> linkedList = new CustomLinkedList<ItemType>();
+        private CustomLinkedList<StackItem> linkedList = new CustomLinkedList<StackItem>();
 
         /// <summary>
-        /// The count of the sequence in the <see cref="CustomStack{ItemType}"/>
+        /// The count of the sequence in the <see cref="CustomStack{StackItem}"/>
         /// </summary>
         public int Count => this.linkedList.Count;
 
         /// <summary>
-        /// Adds an item in the sequence of the <see cref="CustomStack{ItemType}"/>
+        /// Adds an item in the sequence of the <see cref="CustomStack{StackItem}"/>
         /// </summary>
-        /// <param name="item">The item that will be stored in the sequence of the <see cref="CustomStack{ItemType}"/></param>
-        public void Push(ItemType item)
+        /// <param name="item">The item that will be stored in the sequence of the <see cref="CustomStack{StackItem}"/></param>
+        public void Push(StackItem item)
         {
             linkedList.AddFirst(item);
         }
 
         /// <summary>
-        /// Removes an item from the sequence of the <see cref="CustomStack{ItemType}"/>
+        /// Removes an item from the sequence of the <see cref="CustomStack{StackItem}"/>
         /// </summary>
         /// <returns>Returns the item that is going to be removed</returns>
         /// <exception cref="InvalidOperationException">If the sequence is empty</exception>
-        public ItemType Pop()
+        public StackItem Pop()
         {
             if (linkedList.Count == 0)
             {
@@ -38,12 +38,12 @@
         }
 
         /// <summary>
-        /// Shows the first item in the sequence of the <see cref="CustomStack{ItemType}"/>.
+        /// Shows the first item in the sequence of the <see cref="CustomStack{StackItem}"/>.
         /// This method does not remove the item from the sequence
         /// </summary>
-        /// <returns>Returns item of type <see cref="{ItemType}"/></returns>
+        /// <returns>Returns item of type <see cref="{StackItem}"/></returns>
         /// <exception cref="ArgumentNullException">Thrwos exception if the sequence is empty</exception>
-        public ItemType Peek()
+        public StackItem Peek()
         {
             if (linkedList.First == null)
             {
@@ -58,7 +58,7 @@
         /// </summary>
         /// <param name="item">item of type </param>
         /// <returns></returns>
-        public bool Contains(ItemType item)
+        public bool Contains(StackItem item)
         {
             var array = this.linkedList.ToArray();
 
