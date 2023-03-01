@@ -1,4 +1,5 @@
 ﻿using CustomImplementation;
+using System.Collections;
 
 CustomLinkedList<int> list = new CustomLinkedList<int>();
 
@@ -20,3 +21,4 @@ CustomStack<int> test = new CustomStack<int>();
 Stack<int> test2 = new Stack<int>();
 test.Push(2);
 test.Push(1);
+Queue queue = new Queue();

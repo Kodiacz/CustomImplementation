@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImplementation", "CustomImplementation\CustomImplementation.csproj", "{182FB990-9E4A-4426-82DD-CDA35D6945F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomImplementation", "CustomImplementation\CustomImplementation.csproj", "{182FB990-9E4A-4426-82DD-CDA35D6945F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImplementation.Test", "CustomImplementation.Test\CustomImplementation.Test.csproj", "{C7DE5800-8895-41D1-9F02-35E63CF0838F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomImplementation.Test", "CustomImplementation.Test\CustomImplementation.Test.csproj", "{C7DE5800-8895-41D1-9F02-35E63CF0838F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalLifespan", "AnimalLifespan\AnimalLifespan.csproj", "{6329692E-8073-4B76-A3A7-830DC69291D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C7DE5800-8895-41D1-9F02-35E63CF0838F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7DE5800-8895-41D1-9F02-35E63CF0838F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7DE5800-8895-41D1-9F02-35E63CF0838F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6329692E-8073-4B76-A3A7-830DC69291D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6329692E-8073-4B76-A3A7-830DC69291D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6329692E-8073-4B76-A3A7-830DC69291D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6329692E-8073-4B76-A3A7-830DC69291D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
