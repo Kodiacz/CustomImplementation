@@ -2,13 +2,9 @@
 {
     public class Rabbit : Animal
     {
-        private readonly int maxEnergy;
-        private int energy;
-
-        public Rabbit(int maxEnergy)
+        public Rabbit()
         {
-            this.maxEnergy = maxEnergy;
-            this.energy = maxEnergy;
+            this.Energy = this.MaxEnergy;
 
             this.Diet = new List<Food>()
             {
@@ -17,33 +13,12 @@
                 Food.BokChoy,
                 Food.Celery,
             };
-        }
 
-        public override int Energy => this.energy;
+            Console.WriteLine($"{nameof(Rabbit)} starts with => {this.MaxEnergy} and his died is {string.Join(", ", this.Diet)}");
+        }
 
         public override IReadOnlyList<Food> Diet { get; }
 
-        public override void Feed(Food food)
-        {
-            if (this.Diet.Contains(food))
-            {
-                if (this.Energy + 1 < this.maxEnergy)
-                {
-                    this.energy++;
-                }
-            }
-            else
-            {
-                if (this.energy > 0)
-                {
-                    this.energy--;
-                }
-
-                if (this.energy == 0)
-                {
-                    Console.WriteLine("The animal died");
-                }
-            }
-        }
+        public override int MaxEnergy => 5;
     }
 }
